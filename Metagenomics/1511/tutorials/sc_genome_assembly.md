@@ -24,6 +24,7 @@ You can chose to work with the latter dataset if you happen to have some extra t
 2. [Familiarizing with data](scg_part2)
 3. [Single-cell genome assembly using SPAdes (HiSeq data)](scg_part3)
 
+
 **Session 2**
 
 4. [Assessing read coverage and chimera checking](scg_part4)

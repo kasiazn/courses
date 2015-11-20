@@ -3,11 +3,14 @@ layout: default
 title:  Part 3: Single cell genome assembly using SPAdes
 ---
 
-# Part 3: Single cell genome assembly
+# Part 3: Single cell genome assembly using SPAdes
 
 <p>
-In this part of the course, you will start doing assemblies of 'real' (but reduced) single cell genome datasets. We will compare two single cell specific assemblers, namely Spades and IDBA-UD, and one 'general-purpose' assembler called Ray (which were introduced by Kasia). The idea is that you will be able to compare the results of these different assemblers on two kinds of datasets (HiSeq and MiSeq), as well as different pre-treatments ('trimming'). You will also have a chance to explore how to decide which assembly is the best ('assembly metrics'), as there is no simple asnwer to this question.
-Out of the total 12 assemblies we like you to compare, we suggest one person does only 3 on one of the datasets and pre-treatments. This way you can focus and skip handling too many folders and files. Assembly is also relatively time-consuming (although we have prepared reduced datasets for the tutorial to keep the times reasonable). So if you work as a group of 4 you can collect the results in one summary table we will look at. You will find a list of these tables below.
+In this part of the course, you will start doing assemblies of 'real' (but reduced) single cell genome datasets using the assembler SPAdes (which was introduced by Kasia). 
+The idea is that you will be exploring how different settings of SPAdes and different pre-treatments ('trimming') of your datasets will affect your assembly quality ('assembly metrics'). 
+Below you will find a table in which different settings are indicated for running SPAdes (different 'flags' and datasets).
+Given that assembly is relatively time-consuming (even with the reduced datasets used here during the tutorial), we suggest that you distribute the different assemblies amongst different groups to save time. 
+There are a total of 12 SPAdes assemblies to run in this exercise and it would be good to form a group of 4 people and each can take care of 3 assemblies.
 </p>
 
 <!--- 
@@ -17,7 +20,8 @@ Note that you will have to fill in the results from the exercises in Tables 1 to
 --->
 
 Actual tables to be filled in are provided in Google Docs and the links can be found below. 
-You should talk to each other to form the groups and split the work. Do not worry if you miss something, we will collect result from all groups and discuss it together.  
+Note that each group will consist of 4 people except Group 8 which will consist of 3 people. 
+You should talk to each other to form the groups and make sure that you work in groups to discuss who will work on which assembly.  
 
 [Group 1:](https://docs.google.com/spreadsheet/ccc?key=0AuNHyFPCsxthdGRKMXJwdF9jVDMzX2lGMkdJSDdOcnc&usp=sharing)  
 [Group 2:](https://docs.google.com/spreadsheet/ccc?key=0AuNHyFPCsxthdC0tdzFySDFyaDNIdEh4M01xMXFQb3c&usp=sharing)  
@@ -29,7 +33,89 @@ You should talk to each other to form the groups and split the work. Do not worr
 [Group 8:](https://docs.google.com/spreadsheets/d/1Q3QBvPYzQ1kFHjWu0O5Jf1wgSH-9sxMrcndoLlNW92Y/edit?usp=sharing)  
 
 
+## 3.1a. Preparing your data
 
+The following set of commands are to be typed in your compute node (for example mXX - look up using ```jobinfo -u username``` command). 
+Make sure you are typing them in the compute node and not log in node. Go back to Part 1 to check how to log in to your compute node.  
+Before starting the exercises, you should make a folder named *single_cell_exercises* in your home directory where the exercises will be run.
+Then create 2 folders *dataset1* and *dataset2* where the raw data will be linked
+
+```sh
+mkdir ~/single_cell_exercises
+cd ~/single_cell_exercises/
+mkdir dataset1 dataset2
+```
+
+Next, make symbolic links of sequences in those folders:
+
+```sh
+ln -s /proj/g2015028/nobackup/single_cell_exercises/sequences/dataset1/ dataset1/
+ln -s /proj/g2015028/nobackup/single_cell_exercises/sequences/dataset2/ dataset2/
+```
+**Please, do not modify those files**
+
+Check that the data is present in those 2 datasets folders
+
+```sh
+ls dataset1
+ls dataset2
+```
+
+You should now see 2 files per dataset, a forward fastq file ```_R1_001.fastq``` and its reverse ```_R2_001.fastq```  
+
+Later in some commands we use the variables *sample* and *merge*, the following commands set those variables. 
+We will also load the softwares we need to work.  
+**In case you loose your connection, you will need to redo this step again.**  
+
+#### For *Hiseq* data without merging:
+```sh
+sample=Hiseq
+merge=''
+cd ~/single_cell_exercises/dataset1
+source /proj/g2015028/nobackup/single_cell_exercises/modules_load
+```
+
+#### For *Hiseq* data with merging:
+```sh
+sample=Hiseq
+merge=SeqPrep_
+cd ~/single_cell_exercises/dataset1
+source /proj/g2015028/nobackup/single_cell_exercises/modules_load
+```
+
+#### For *Miseq* data without merging:
+```sh
+sample=Miseq
+merge=''
+cd ~/single_cell_exercises/dataset2
+source /proj/g2015028/nobackup/single_cell_exercises/modules_load
+```
+
+#### For *Miseq* data with merging:
+```sh
+sample=Miseq
+merge=SeqPrep_
+cd ~/single_cell_exercises/dataset2
+source /proj/g2015028/nobackup/single_cell_exercises/modules_load
+```
+
+## 3.1b. Merging reads with SeqPrep
+
+**This part is only for the ones that will work on Merged reads. Skip this if you do the assembly on the raw reads**  
+To merge read pairs that have significant overlaps, we will use the tool called *'SeqPrep'*. 
+
+First, create a folder where to store the output then merge the reads:
+
+```sh
+mkdir merged_reads
+SeqPrep -q 30 -f G5_${sample}_1.fastq -r G5_${sample}_2.fastq \
+-1 merged_reads/G5_${sample}_merge_1.fastq.gz \
+-2 merged_reads/G5_${sample}_merge_2.fastq.gz \
+-s merged_reads/G5_${sample}_merged.fastq.gz
+```
+
+Note that SeqPrep merges read pairs if overlaps between the read pairs are identified. Quality threshold of 30, for example, can be specified by ```-q 30``` flag 
+for overlaps with some mismatches to be counted. It can also remove adapter sequences optionally.  
 
 
 
