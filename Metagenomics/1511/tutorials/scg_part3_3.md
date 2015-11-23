@@ -35,7 +35,6 @@ mkdir spades_assemblies
 >-o spades_assemblies/G5_${sample}_SeqPrep_sc_careful
 >```
 
->You are now providing 3 input files to the assembler; 2 unmerged read pairs and 1 merged reads. After this assembly is done, 
 
 *Notice: Those previous commands will launch SPAdes assembly but also check how long the assembly takes. After the assembly has completed, check the time it took for the program to run. You should look at the 'real' time. 
 Record the time in the spreadsheet table.

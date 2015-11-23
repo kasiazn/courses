@@ -6,7 +6,7 @@ title:  Part 3: Single cell genome assembly using SPAdes
 # Part 3: Single cell genome assembly
 
 <p>
-In this part of the course, you will start doing assemblies of 'real' (but reduced) single cell genome datasets. We will compare two single cell specific assemblers, namely Spades and IDBA-UD, and one 'general-purpose' assembler called Ray (which were introduced by Kasia). The idea is that you will be able to compare the results of these different assemblers on two kinds of datasets (HiSeq and MiSeq), as well as different pre-treatments ('trimming'). You will also have a chance to explore how to decide which assembly is the best ('assembly metrics'), as there is no simple asnwer to this question.
+In this part of the course, you will start doing assemblies of 'real' (but reduced) single cell genome datasets. We will compare two single cell specific assemblers, namely Spades and IDBA-UD, and one 'general-purpose' assembler called Ray (which were introduced by Kasia). The idea is that you will be able to compare the results of these different assemblers on two kinds of datasets (HiSeq and MiSeq), as well as different pre-treatments ('trimming'). You will also have a chance to explore how to decide which assembly is the best ('assembly metrics'), as there is no simple answer to this question.
 Out of the total 12 assemblies we like you to compare, we suggest one person does only 3 on one of the datasets and pre-treatments. This way you can focus and skip handling too many folders and files. Assembly is also relatively time-consuming (although we have prepared reduced datasets for the tutorial to keep the times reasonable). So if you work as a group of 4 you can collect the results in one summary table we will look at. You will find a list of these tables below.
 </p>
 
@@ -44,11 +44,11 @@ These steps will help you obtain results to think about the following questions:
 ## Questions:
 
 
-**Q3.1:** Did you notice how many reads were discarded in the pre-processing? do the numbers differ between the Miseq and Hiseq datasets?  
+**Q3.1:** Did you notice how many reads were discarded in the pre-processing? Do the numbers differ between the Miseq and Hiseq datasets? You can use the group google doc to see the results for all the datasets.  
 
-**Q3.2:** Did you notice any differences between HiSeq and MiSeq data assembled using both --sc and --careful flags, i.e., default?  
+**Q3.2:** Did you notice any differences between HiSeq and MiSeq data and the different assemblers?  
 
-**Q3.3:** Did you notice any differences in the quality of assembly when --sc and --careful were omitted in each data set?  
+**Q3.3:** Did you notice the impact of trimming, is it the same for all assemblers?  
 
 **Q3.4:** What do you think is the best way to assess the 'quality' of an assembly? (e.g. total size, N50, number of predicted ORFs, completeness)  
 
@@ -56,9 +56,8 @@ These steps will help you obtain results to think about the following questions:
 
 **Q3.6:** What is the identity of the organism based on the analyses you have performed? What phylum does it belong to and is there any closely related organisms in the databases?  
 
-**Q3.7:** Try to find out in what type of environment you might find similar organisms in .
+**Q3.7:** Try to find out in what type of environment you might find similar organisms in.
 
-Note: If you are ahead of time and have completed the exercises (and have plenty of time) you can start doing Part 6, which is similar to this exercise but using MiSeq data.
 
 
 

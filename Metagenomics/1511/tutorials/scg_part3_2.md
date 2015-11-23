@@ -7,7 +7,7 @@ title:  Part 3: Single cell genome assembly using SPAdes
 
 ## 3.2. Pre-processing
 
-Before assembly you can do several pre-processing steps. Here we will focus on quality trimming of the reads with Trimmomatic.
+Before assembly you can do several pre-processing steps. Here we will focus on quality trimming of the reads with Trimmomatic. Keep in mind which dataset you will make assemblies for, perhaps you do not need to trim your dataset.
 
 **Trimming reads with Trimmomatic** 
 

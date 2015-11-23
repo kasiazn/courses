@@ -18,9 +18,9 @@ You can chose to work with the latter dataset if you happen to have some extra t
 
 We will have a lunch break. We will split the discussion of results into two parts, one when you have the assembly results and then another one to summarize the whole day. 
 
-1. [Connecting to UPPMAX](connectToUppmax)
-2. [Familiarizing with data](scg_part2)
-3. [Single-cell genome assembly](scg_part3)
+1. [Connecting to UPPMAX](connectToUppmax)  
+2. [Familiarizing with data](scg_part2)  
+3. [Single-cell genome assembly](scg_part3)  
 3.1. [Organize working folder](scg_part3_1)  
 3.2. [Pre-processing](scg_part3_2)  
 3.3. [Assembly](scg_part3_3)  
@@ -28,7 +28,6 @@ We will have a lunch break. We will split the discussion of results into two par
 3.5. [Gene prediction using Prodigal](scg_part3_5)  
 3.6. [Running completeness estimates](scg_part3_5)  
 3.7. [Identifying ribosomal RNAs](scg_part3_7)  
-
-4. [Assessing read coverage and chimera checking](scg_part4)
-5. [Checking for contaminants](scg_part5)
-6. [Analysis of a novel single-cell genome (bonus exercise)](scg_part7)
+4. [Assessing read coverage and chimera checking](scg_part4)  
+5. [Checking for contaminants](scg_part5)  
+6. [Analysis of a novel single-cell genome (bonus exercise)](scg_part7)  
