@@ -29,12 +29,13 @@ You should talk to each other to form the groups and split the work. Do not worr
 [Group 8:](https://docs.google.com/spreadsheets/d/1Q3QBvPYzQ1kFHjWu0O5Jf1wgSH-9sxMrcndoLlNW92Y/edit?usp=sharing)  
 
 
-3.1. [Organize working folder](scg_part3_1)
-3.2. [Pre-processing](scg_part3_2)
-3.3. [Assembly](scg_part3_3)
-3.4. [Assessing assembly quality using Quast](scg_part3_4)
-3.5. [Gene prediction and completeness estimates](scg_part3_5)
-3.7. [Identifying ribosomal RNAs](scg_part3_7)
+3.1. [Organize working folder](scg_part3_1)  
+3.2. [Pre-processing](scg_part3_2)  
+3.3. [Assembly](scg_part3_3)  
+3.4. [Assessing assembly quality using Quast](scg_part3_4)  
+3.5. [Gene prediction using Prodigal](scg_part3_5)  
+3.6. [Running completeness estimates](scg_part3_5)  
+3.7. [Identifying ribosomal RNAs](scg_part3_7)  
 
 
 These steps will help you obtain results to think about the following questions:
@@ -43,8 +44,7 @@ These steps will help you obtain results to think about the following questions:
 ## Questions:
 
 
-**Q3.1:** Did you notice how many read pairs from HiSeq or MiSeq data were merged by SeqPrep?  
-Is there a reason why a certain data set has higher merge rates than the other? How many reads were discarded in the process?  
+**Q3.1:** Did you notice how many reads were discarded in the pre-processing? do the numbers differ between the Miseq and Hiseq datasets?  
 
 **Q3.2:** Did you notice any differences between HiSeq and MiSeq data assembled using both --sc and --careful flags, i.e., default?  
 

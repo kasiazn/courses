@@ -37,9 +37,6 @@ mkdir spades_assemblies
 
 >You are now providing 3 input files to the assembler; 2 unmerged read pairs and 1 merged reads. After this assembly is done, 
 
-Repeat the assemblies again but omitting *'--sc'* or *'--careful'* flags as in the previous exercises. 
-Name the next two assemblies as *G5_Hiseq_SeqPrep_careful* and *G5_Hiseq_SeqPrep_sc*.
-
 *Notice: Those previous commands will launch SPAdes assembly but also check how long the assembly takes. After the assembly has completed, check the time it took for the program to run. You should look at the 'real' time. 
 Record the time in the spreadsheet table.
 In general, typing the command ```time``` before other commands will help you check how long the computation took.*
