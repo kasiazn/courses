@@ -35,14 +35,14 @@ ls dataset2
 
 You should now see 2 files per dataset, a forward fastq file ```_R1_001.fastq``` and its reverse ```_R2_001.fastq```  
 
-Later in some commands we use the variables *sample* and *merge*, the following commands set those variables. 
-We will also load the softwares we need to work.  
+Later in some commands we use the variables *sample* and *trim*, the following commands set those variables. 
+We will also load the softwares we need to work, if you are interested check modules_load file for details.  
 **In case you loose your connection, you will need to redo this step again.**  
 
 #### For *Hiseq* data without trimming:
 ```sh
 sample=Hiseq
-merge=''
+trim=''
 cd ~/single_cell_exercises/dataset1
 source /proj/g2015028/nobackup/single_cell_exercises/modules_load
 ```
@@ -50,7 +50,7 @@ source /proj/g2015028/nobackup/single_cell_exercises/modules_load
 #### For *Hiseq* data with trimming:
 ```sh
 sample=Hiseq
-merge=SeqPrep_
+trim=Trimmomatic_
 cd ~/single_cell_exercises/dataset1
 source /proj/g2015028/nobackup/single_cell_exercises/modules_load
 ```
@@ -58,7 +58,7 @@ source /proj/g2015028/nobackup/single_cell_exercises/modules_load
 #### For *Miseq* data without trimming:
 ```sh
 sample=Miseq
-merge=''
+trim=''
 cd ~/single_cell_exercises/dataset2
 source /proj/g2015028/nobackup/single_cell_exercises/modules_load
 ```
@@ -66,7 +66,7 @@ source /proj/g2015028/nobackup/single_cell_exercises/modules_load
 #### For *Miseq* data with merging:
 ```trimming
 sample=Miseq
-merge=SeqPrep_
+trim=Trimmomatic_
 cd ~/single_cell_exercises/dataset2
 source /proj/g2015028/nobackup/single_cell_exercises/modules_load
 ```

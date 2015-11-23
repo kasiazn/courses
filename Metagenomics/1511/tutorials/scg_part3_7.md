@@ -45,5 +45,5 @@ blastn -db $DB -evalue 1e-6 -num_threads 8 -query G5_${sample}_${merge}sc_carefu
 
 After running Blastn, can you identify what organism G5 belongs to?
 
-For the next part you need to come back in the 
+
 

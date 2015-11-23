@@ -22,12 +22,16 @@ You can chose to work with the latter dataset if you happen to have some extra t
 
 1. [Connecting to UPPMAX](connectToUppmax)
 2. [Familiarizing with data](scg_part2)
-3. [Single-cell genome assembly using SPAdes (HiSeq data)](scg_part3)
-
+3. [Single-cell genome assembly](scg_part3)
+3.1. [Organize working folder](scg_part3_1)
+3.2. [Pre-processing](scg_part3_2)
+3.3. [Assembly](scg_part3_3)
+3.4. [Assessing assembly quality using Quast](scg_part3_4)
+3.5. [Gene prediction and completeness estimates](scg_part3_5)
+3.7. [Identifying ribosomal RNAs](scg_part3_7)
 
 **Session 2**
 
 4. [Assessing read coverage and chimera checking](scg_part4)
 5. [Checking for contaminants](scg_part5)
-6. [Single-cell genome assembly using SPAdes (MiSeq data) and comparison between HiSeq vs. MiSeq data](scg_part6)
 7. [Analysis of a novel single-cell genome (bonus exercise)](scg_part7)
