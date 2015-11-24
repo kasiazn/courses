@@ -54,14 +54,24 @@ Bioinformatically oriented questions:
 
 Here is a list of optional exercises collected in one place, from the various parts of the tutorial that you went through.
 
+Preprocessing - visualization
+
+To visualize the quality of the reads you can use [FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) which provide plots for several checks together with some guidelines on which results might be suspicious. You can see for example a plot of qualities along the read length, look at the duplication level, and so on. You have learned this yesterday and you can try it for a single cell data if you like.
+
 Preprocessing - merging reads
+
+Another step you can do if your library setup is such that sequencing reads should be overlapping, is merging them. An example of how to do that is described [here](scg_part3_merging). Considering that all of the assemblers we use can take in paired reads, and some of them (Spades) actually do not recommend using the qualities that the merging result in, we skip this for the main assembly comparison. It can still be a useful step for other purposes.
 
 Ray assembly optimization:
 
+If you have time you can investigate the influence of various kmer lengths on the assembly results. Try for example using kmers increasing in steps of 10 from 30 to 64, which is the hard-coded limit. Check Ray log output file to make sure about the kmer actually used. If number larger than the threshold is given Ray changes it to the maximum allowed, makes a not of it in the log and proceeds. 
+
 Spades assembly optimization:
 
-In this bonus exercise, a different parameter will be introduced, i.e., k-mers. SPAdes in default mode runs with **k-mers of 21, 33, and 55**. 
-In this exercise, you will set the **k-mers to 55, 77, and 99**. To set these k-mers, you need to provide this parameter when running SPAdes:
+If you have time you can investigate the influence of the flags on the assembly time and results. '--careful' flag uses *'bowtie'* tool to map the reads back to the contigs and check for errors due to bad quality sequences and correct these errors. This results in longer assembly times but should improve the results, especially for reads that were not pre-processed. SPAdes can handle single-cell genomic data that is known to be highly biased in terms of sequence coverage along the length of the genome by using the '--sc' flag.
+
+Now you can also explore the influence of k-mers choice. SPAdes in default mode runs with **k-mers of 21, 33, and 55**. 
+Try setting **k-mers to 55, 77, and 99**. To set these k-mers, you need to provide this parameter when running SPAdes:
 
 ```
 -k 55,77,99
