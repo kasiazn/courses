@@ -5,7 +5,7 @@ title:  'Part 3: Single cell genome assembly using SPAdes'
 
 # Part 3: Single cell genome assembly
 
-We will run three different assemblers on the data. You will choose either HiSeq or MiSeq dataset and trim it or use raw reads depending on how you organize your group. Make sure your variables (sample and trimming) are set properly. You will use one dataset so you can have one assembly folder and create three subfolders for the Ray, IDBA and Spades results. 
+We will run three different assemblers on the data. You will choose either HiSeq or MiSeq dataset and trim it or use raw reads depending on how you organize your group. Make sure your variables (sample and trimming) are set properly. You will use one dataset so you can have one assembly folder and create three subfolders for the Ray, IDBA and Spades results. You do not need to create the folders, the assemblers will do that.
 
 ```sh
 mkdir -p assemblies/
@@ -81,9 +81,7 @@ Ray is an assembler that can be highly parallelized and can therefore be a good 
 >```
 
 
-**Optional steps** 
 
-If you have time you can investigate the influence of various kmer lengths on the assembly results. Try for example using kmers increasing in steps of 10 from 30 to 64, which is the hard-coded limit. Check Ray log output file to make sure about the kmer actually used. If number larger than the threshold is given Ray changes it to the maximum allowed, makes a not of it in the log and proceeds. 
 
 
 
