@@ -15,8 +15,8 @@ With the knowledge that you have acquired during this course, you can try to:
 - try to asses if the dataset suffers from contamination
 - find out any interesting features that might be encoded by the genome
 
-In this exercise, you will work with MiSeq data produced from a different Single-cell Amplified Genome (SAG) than G5. 
-The assemblies here will be carried out in pretty much the same way as those examples shown in Part 3.1.
+In this exercise, you will work with MiSeq data produced from a different Single-cell Amplified Genome (SAG) than G5 in the first part of the tutorial. You can do the assemblies in the same way as the examples shown in Part 3. There is no need to optimize the steps, instead think about what is your first choice of assembler, settings and preprocessing with the experience you have now.
+
 An overview of the steps are listed below:
 
 0. Think about the file/folder structure and naming convention
@@ -41,16 +41,24 @@ If you have more time you can play around with the other optional questions and 
 
 Optional exercises
 
-**Q7.5** Can you say anything about the metabolism based on the assembled data?  
+Biologically oriented questions:
 
-**Q7.1** Did you notice the major differences between the two assemblies (untrimmed reads)?  
-What about the differences between two assemblies for trimmed reads?  
-**Q7.2** What do you think happened by setting a longer k-mer sizes than default settings?  
-**Q7.3** Do you think the number of reads are enough to obtain a good assembly or if more sequences should be obtained?  
+**Q7.2** Can you say anything about the metabolism based on the assembled data?  
 
-Link all optional exercises?
+Bioinformatically oriented questions:
 
-Move this into optional Spades:
+**Q7.3** Did you notice any major differences between the assemblies using different assembler, setting or input data (trimmed/untrimmed reads)? To make this question more specific you can look into the optional exercises below where some assembly optimization options are suggested.  
+**Q7.4** Do you think the number of reads are enough to obtain a good assembly or should more sequences be obtained?  
+
+## Optional exercises
+
+Here is a list of optional exercises collected in one place, from the various parts of the tutorial that you went through.
+
+Preprocessing - merging reads
+
+Ray assembly optimization:
+
+Spades assembly optimization:
 
 In this bonus exercise, a different parameter will be introduced, i.e., k-mers. SPAdes in default mode runs with **k-mers of 21, 33, and 55**. 
 In this exercise, you will set the **k-mers to 55, 77, and 99**. To set these k-mers, you need to provide this parameter when running SPAdes:
