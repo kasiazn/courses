@@ -19,15 +19,15 @@ In this exercise, you will work with MiSeq data produced from a different Single
 
 An overview of the steps are listed below:
 
-0. Think about the file/folder structure and naming convention
+0. File/folder structure and naming convention
 1. Preprocessing
-2. Optimize the assembly (tool, kmers, flags)
-3. Run *'Quast'* and *'micomplete'* tools for assembly stats
-4. Run Prodigal to predict ORFs
-5. Run RNAmmer to predict rRNAs
-6. Run Blastn and Blastp of the genes
-7. Blast the rRNA genes against Silva database
-8. Organize the results
+2. Assembly optimization (tool, kmers, flags)
+3. Assembly stats from *'Quast'* and *'micomplete'* 
+4. Prodigal predicttion of ORFs
+5. RNAmmer predicttion of rRNAs
+6. Blastn and Blastp of the genes
+7. Blastn of the rRNA genes against Silva database
+8. Overview of the results
 
 
 We suggest that you start with question 1 and think of the steps necessary to obtain the answer. 
