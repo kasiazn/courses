@@ -13,10 +13,10 @@ Room:  E10:1308/1309 (BMC, entrance C11)
 
 **09.00-09.20** Lecture: Introduction to metagenomics 
 (Anders Andersson)  
-**09.20-12.00** Tutorial (incl. coffe break) Metagenomics (Johannes Alneberg, Luisa Hugerth, John Larsson, Anders Andersson, Thijs Ettema, Jimmy Saw, Kasia Zaremba)  
+**09.20-12.00** Tutorial (incl. coffe break) Metagenomics (Johannes Alneberg, Luisa Hugerth, John Larsson, Anders Andersson, Thijs Ettema, Felix Homa, Kasia Zaremba-Niedzwiedzka)  
 **12.00-12.45** Lunch  
 **12.45-17.00** Tutorial (incl. coffe break) Metagenomics 
-(Johannes Alneberg, Luisa Hugerth, John Larsson, Anders Andersson, Thijs Ettema, Jimmy Saw, Kasia Zaremba)  
+(Johannes Alneberg, Luisa Hugerth, John Larsson, Anders Andersson, Thijs Ettema, Felix Homa, Kasia Zaremba-Niedzwiedzka)  
 **18.00** <abbr title="To be announced">TBA</abbr> 
 
 <!--- 
@@ -34,10 +34,10 @@ Room:  E10:1308/1309 (BMC, entrance C11)
 (Kasia Zaremba-Niedzwiedzka)  
 **10:00-10:20** Coffee break  
 **10:20-12:00** Tutorial Single cell genome assembly (Session 1) 
-(Anders Andersson, Thijs Ettema, Jimmy Saw, Kasia Zaremba)  
+(Anders Andersson, Thijs Ettema, Felix Homa, Kasia Zaremba-Niedzwiedzka)  
 **12.00-12.45** Lunch  
 **12.45-17.00** Tutorial Single cell genome assembly (Session 2) 
-(Anders Andersson, Thijs Ettema, Jimmy Saw, Kasia Zaremba)  
+(Anders Andersson, Thijs Ettema, Felix Homa, Kasia Zaremba-Niedzwiedzka)  
 
 <!---  
 [Lecture: Single cell genomics](slides/Single_cell_genomics.PDF)  
