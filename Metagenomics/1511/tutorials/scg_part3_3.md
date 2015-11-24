@@ -31,7 +31,7 @@ Spades is a prokaryotic genome assembler that was specifically designed to be ab
 >-1 trimmed/G5_${sample}${trim}_1P.fastq \
 >-2 trimmed/G5_${sample}${trim}_2P.fastq \
 >-s trimmed/G5_${sample}${trim}_U.fastq \
->-o assemblies/Spades
+>-o assemblies/Spades${trim}
 >```
 
 
@@ -57,7 +57,7 @@ IDBA-UD does not take the quality files and in the first step you have to conver
 
 >```sh
 >fq2fa --merge trimmed/G5_${sample}${trim}_1P.fastq trimmed/G5_${sample}${trim}_2P.fastq trimmed/G5_${sample}${trim}_idba_input.fa
->time idba_ud -r trimmed/G5_${sample}${trim}_idba_input.fa -o assemblies/IDBA --maxk 124 
+>time idba_ud -r trimmed/G5_${sample}${trim}_idba_input.fa -o assemblies/IDBA${trim} --maxk 124 
 >```
 
 ## 3.3c. Assemble your data Using Ray
@@ -73,7 +73,7 @@ Ray is an assembler that can be highly parallelized and can therefore be a good 
 * if you work with the **trimmed** reads
 
 >```sh
->time mpirun -n 8 Ray -k 31 -p trimmed/G5_${sample}${trim}_1P.fastq trimmed/G5_${sample}${trim}_2P.fastq -o assemblies/Ray &> assemblies/ray.log 
+>time mpirun -n 8 Ray -k 31 -p trimmed/G5_${sample}${trim}_1P.fastq trimmed/G5_${sample}${trim}_2P.fastq -o assemblies/Ray${trim} &> assemblies/ray.log 
 >```
 
 
