@@ -39,10 +39,6 @@ Spades is a prokaryotic genome assembler that was specifically designed to be ab
 Record the time in the spreadsheet table.
 In general, typing the command ```time``` before other commands will help you check how long the computation took.*
 
-**Optional steps** 
-
-If you have time you can investigate the influence of the flags on the assembly time and results. '--careful' flag uses *'bowtie'* tool to map the reads back to the contigs and check for errors due to bad quality sequences and correct these errors. This results in longer assembly times but should improve the results, especially for reads that were not pre-processed. SPAdes can handle single-cell genomic data that is known to be highly biased in terms of sequence coverage along the length of the genome by using the '--sc' flag.
-
 
 ## 3.3b. Assemble your data Using IDBA-UD
 
